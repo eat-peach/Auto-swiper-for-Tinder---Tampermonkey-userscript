@@ -20,18 +20,32 @@ A Tampermonkey userscript that automatically swipes right on Tinder. Runs silent
 **3. 使用 / Usage**
 
 - 打开 https://tinder.com/app/recs
-- 脚本自动启动，每隔 1~3 秒随机右划一次
+- 脚本自动启动，右下角出现控制面板
 - Open https://tinder.com/app/recs
-- The script starts automatically and swipes right every 1~3 seconds
+- The script starts automatically and a control panel appears in the bottom-right corner
 
 ---
 
 ## 功能 / Features
 
-- ✅ 随机间隔 1~3 秒，模拟人工操作 / Random 1~3s delay to mimic human behavior
+- ✅ 实时 Swipe 计数显示 / Real-time swipe counter
+- ✅ 速度滑块，5 档可调（0.3s ~ 12s）/ Speed slider with 5 levels (0.3s ~ 12s)
+- ✅ 每档速度为随机区间，模拟人工操作 / Each speed level uses a random interval to mimic human behavior
+- ✅ 一键暂停 / 继续，状态指示灯同步 / One-click pause/resume with status indicator
 - ✅ 后台运行，无需停留在当前 tab / Runs in background tab
-- ✅ Console 实时显示划卡计数 / Real-time swipe count in console
 - ✅ 无任何外部依赖 / No external dependencies
+
+---
+
+## 速度档位 / Speed Levels
+
+| 档位 / Level | 间隔 / Interval | 说明 / Note |
+|:---:|:---:|:---:|
+| 1 | 0.3 ~ 0.7 秒 | 极快 / Very Fast |
+| 2 | 0.7 ~ 1.5 秒 | 快 / Fast |
+| 3 | 1 ~ 3 秒 | 默认 / Default |
+| 4 | 3 ~ 6 秒 | 慢 / Slow |
+| 5 | 6 ~ 12 秒 | 极慢 / Very Slow |
 
 ---
 
@@ -41,6 +55,8 @@ A Tampermonkey userscript that automatically swipes right on Tinder. Runs silent
 - If Tinder shows a paywall or verification popup, the script pauses until it's dismissed
 - Tinder 更新 DOM 结构后 selector 可能失效，届时提 Issue
 - If Tinder updates its DOM, the selector may break — feel free to open an Issue
+- 建议使用默认档位（3档），过快可能触发 Tinder 风控
+- Default speed level (3) is recommended — too fast may trigger Tinder's anti-bot detection
 
 ---
 
