@@ -1,0 +1,1 @@
+# Auto-swiper-for-Tinder---Tampermonkey-userscript
