@@ -1,4 +1,14 @@
-# Tinder Auto Swiper
+# Tinder Auto Swiper 🔥
+
+<p align="center">
+  <img src="assets/screenshot-main.png" width="260" alt="主页面板"/>
+  <img src="assets/screenshot-filter.png" width="260" alt="筛选面板"/>
+  <img src="assets/screenshot-minimized.png" width="260" alt="最小化状态"/>
+</p>
+
+<p align="center">
+  <b>主页 Tab</b> &nbsp;&nbsp;&nbsp; <b>筛选 Tab</b> &nbsp;&nbsp;&nbsp; <b>最小化状态</b>
+</p>
 
 一个自动右划 Tinder 的油猴脚本，支持简介筛选、可视化控制面板，后台静默运行。
 
