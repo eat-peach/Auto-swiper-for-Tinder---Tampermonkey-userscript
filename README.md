@@ -1,8 +1,8 @@
-# Auto-swiper-for-Tinder---Tampermonkey-userscript
+# Tinder Auto Swiper
 
-一个自动右划 Tinder 的油猴脚本，无需一直停留在页面，后台静默运行。
+一个自动右划 Tinder 的油猴脚本，支持简介筛选、可视化控制面板，后台静默运行。
 
-A Tampermonkey userscript that automatically swipes right on Tinder. Runs silently in the background — no need to stay on the tab.
+A Tampermonkey userscript that automatically swipes right on Tinder with profile filtering and a visual control panel. Runs silently in the background.
 
 ---
 
@@ -14,26 +14,29 @@ A Tampermonkey userscript that automatically swipes right on Tinder. Runs silent
 
 **2. 安装脚本 / Install the script**
 
-- 打开 `tinder-auto-swiper.user.js` → 点击 **Raw** → Tampermonkey 会自动弹出安装提示
-- Open `tinder-auto-swiper.user.js` → Click **Raw** → Tampermonkey will prompt you to install
+- 打开 `tinder-auto-swiper.user.js` -> 点击 **Raw** -> Tampermonkey 会自动弹出安装提示
+- Open `tinder-auto-swiper.user.js` -> Click **Raw** -> Tampermonkey will prompt you to install
 
 **3. 使用 / Usage**
 
 - 打开 https://tinder.com/app/recs
-- 脚本自动启动，右下角出现控制面板
+- 右下角出现控制面板，点击 **▶** 开始运行
 - Open https://tinder.com/app/recs
-- The script starts automatically and a control panel appears in the bottom-right corner
+- A control panel appears. Click **▶** to start
 
 ---
 
 ## 功能 / Features
 
-- ✅ 实时 Swipe 计数显示 / Real-time swipe counter
-- ✅ 速度滑块，5 档可调（0.3s ~ 12s）/ Speed slider with 5 levels (0.3s ~ 12s)
-- ✅ 每档速度为随机区间，模拟人工操作 / Each speed level uses a random interval to mimic human behavior
-- ✅ 一键暂停 / 继续，状态指示灯同步 / One-click pause/resume with status indicator
-- ✅ 后台运行，无需停留在当前 tab / Runs in background tab
-- ✅ 无任何外部依赖 / No external dependencies
+- 实时右划/左划计数 / Real-time swipe counter
+- 速度滑块 5 档可调（0.3s ~ 12s），每档随机区间模拟人工操作 / 5-level speed slider with random intervals
+- 关键词筛选：匹配简介、Prompt、性取向、语言、烟酒等所有可见资料 / Keyword filtering across full profile
+- 距离筛选：超过设定公里数左划 / Distance filter
+- 身高筛选：低于设定厘米数左划 / Height filter
+- 无身高/距离信息时默认右划 / Defaults to right swipe if info is missing
+- 设置持久化，刷新页面自动恢复 / Settings saved across sessions
+- 默认暂停，手动开始 / Starts paused by default
+- 后台运行，无需停留在当前 tab / Runs in background tab
 
 ---
 
@@ -49,14 +52,39 @@ A Tampermonkey userscript that automatically swipes right on Tinder. Runs silent
 
 ---
 
+## 更新日志 / Changelog
+
+### V2.0
+- 新增简介页全内容筛选（性取向、语言、Prompt、烟酒习惯等所有可见字段）
+- 新增距离筛选和身高筛选
+- 新增界面语言自动检测，提示关键词应使用的语言
+- 说明选项类字段（语言/性取向等）随界面语言，自填简介随对方语言
+- 修复按钮定位改用 `sparks-like-default` class，彻底解决误触 Super Like 问题
+- 控制面板新增 Tab 分页（主页 / 筛选）
+- 新增最小化功能，最小化状态下仍可一键开始/暂停
+- 新增面板拖动，可在页面任意位置移动
+- 展开时自动修正位置，防止面板超出视窗边缘
+- 设置持久化，关键词/距离/身高刷新后自动恢复
+- 默认暂停启动，不再自动开始
+
+### V1.0
+- 基础自动右划功能
+- 随机间隔（1~3 秒）模拟人工操作
+- 速度滑块 5 档可调
+- 右划/左划计数显示
+- 暂停/继续按钮
+- 后台运行，无需停留在当前 tab
+
+---
+
 ## 注意事项 / Notes
 
 - 若 Tinder 弹出付费或验证弹窗，脚本会暂停直到弹窗消失
-- If Tinder shows a paywall or verification popup, the script pauses until it's dismissed
-- Tinder 更新 DOM 结构后 selector 可能失效，届时提 Issue
-- If Tinder updates its DOM, the selector may break — feel free to open an Issue
-- 建议使用默认档位（3档），过快可能触发 Tinder 风控
-- Default speed level (3) is recommended — too fast may trigger Tinder's anti-bot detection
+- If Tinder shows a paywall or verification popup, the script pauses until dismissed
+- Tinder 更新 DOM 后 selector 可能失效，届时提 Issue
+- If Tinder updates its DOM, selectors may break. Feel free to open an Issue
+- 建议使用默认档位（3档），过快可能触发风控
+- Default speed level (3) recommended. Too fast may trigger anti-bot detection
 
 ---
 
