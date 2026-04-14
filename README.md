@@ -59,7 +59,7 @@ A Tampermonkey userscript that automatically swipes right on Tinder with profile
 - 新增距离筛选和身高筛选
 - 新增界面语言自动检测，提示关键词应使用的语言
 - 说明选项类字段（语言/性取向等）随界面语言，自填简介随对方语言
-- 修复按钮定位改用 `sparks-like-default` class，彻底解决误触 Super Like 问题
+- 修复按钮定位改用 `sparks-like-default` class，彻底解决误触问题
 - 控制面板新增 Tab 分页（主页 / 筛选）
 - 新增最小化功能，最小化状态下仍可一键开始/暂停
 - 新增面板拖动，可在页面任意位置移动
