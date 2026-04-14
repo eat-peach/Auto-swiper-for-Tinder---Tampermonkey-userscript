@@ -2,7 +2,7 @@
 // @name        Tinder-Auto-Swiper
 // @namespace   Tinder
 // @include     https://tinder.com/app/recs
-// @version     6.0
+// @version     1.0
 // @description Auto swipe right on Tinder with UI controls
 // @run-at      document-end
 // @grant       none
@@ -135,5 +135,5 @@
   }
 
   setTimeout(scheduleNext, 3000);
-  console.log('[AutoSwiper] 已启动 v6');
+  console.log('[AutoSwiper] 已启动 v1');
 })();
